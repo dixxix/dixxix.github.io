@@ -501,8 +501,8 @@
   </div>
 </footer>
 
-<!-- JavaScript для анимации прокрутки кружки -->
 <script>
+  // Анимация кружки при скролле
   const scrollingCup = document.querySelector('.scrolling-cup');
   
   if (scrollingCup) {
@@ -512,36 +512,34 @@
       const heroHeight = heroSection.offsetHeight;
       const windowHeight = window.innerHeight;
       
+      // Прогресс скролла (0 to 1)
       const scrollProgress = scrolled / (heroHeight - windowHeight);
       const clampedProgress = Math.min(Math.max(scrollProgress, 0), 1);
       
-      const rotation = clampedProgress * -720;
-      const translateX = clampedProgress * -600;
-      const translateY = 50 + (clampedProgress * 20);
+      // Движение ВЛЕВО и вращение
+      const rotation = clampedProgress * -720; // 2 оборота
+      const translateX = clampedProgress * -800; // Движение влево на 800px
       
-      scrollingCup.style.transform = `translateY(-${translateY}%) translateX(${translateX}px) rotate(${rotation}deg)`;
+      scrollingCup.style.transform = `translateY(-50%) translateX(${translateX}px) rotate(${rotation}deg)`;
       
-      if (clampedProgress > 0.8) {
-        scrollingCup.style.opacity = 1 - ((clampedProgress - 0.8) * 5);
+      // Плавное исчезновение
+      if (clampedProgress > 0.7) {
+        scrollingCup.style.opacity = 0.6 - ((clampedProgress - 0.7) * 2);
       } else {
-        scrollingCup.style.opacity = 1;
+        scrollingCup.style.opacity = 0.6;
       }
     });
   }
-</script>
-
-<!-- JavaScript для переключения табов меню -->
-<script>
+  
+  // Табы меню
   document.querySelectorAll('.tabs__btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tabs__btn').forEach(b => b.classList.remove('is-active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('is-active'));
       btn.classList.add('is-active');
-      const tabId = btn.getAttribute('data-tab');
-      document.getElementById(tabId).classList.add('is-active');
+      document.getElementById(btn.getAttribute('data-tab')).classList.add('is-active');
     });
   });
 </script>
-
 </body>
 </html>
