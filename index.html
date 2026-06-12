@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Sip & Site — кофейня-коворкинг в Ростове-на-Дону</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -32,8 +32,8 @@
     </div>
   </div>
   
-  <!-- Кружка которая прокручивается при скролле -->
-  <div class="scrolling-cup">
+  <!-- Кружка с анимацией при скролле -->
+  <div class="scrolling-cup" id="scrollingCup">
     <img src="images/matcha.png" alt="Матча латте">
   </div>
 </section>
@@ -46,28 +46,28 @@
     <div class="features__grid">
       <div class="card feature">
         <div class="feature__icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
         <h3 class="feature__title">Свежая обжарка</h3>
         <p class="feature__text">Зёрна обжариваем небольшими партиями каждую неделю.</p>
       </div>
       <div class="card feature">
         <div class="feature__icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h3 class="feature__title">Быстрый Wi-Fi</h3>
         <p class="feature__text">Стабильный интернет до 500 Мбит/с без ограничений.</p>
       </div>
       <div class="card feature">
         <div class="feature__icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 6v2M16 6v2"/></svg>
         </div>
         <h3 class="feature__title">Розетки у каждого стола</h3>
         <p class="feature__text">Заряжайте ноутбук и гаджеты, не отвлекаясь на поиски.</p>
       </div>
       <div class="card feature">
         <div class="feature__icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.5 6.5l-1.5-1.5M18.5 17.5l-1.5-1.5"/><circle cx="12" cy="12" r="4"/></svg>
         </div>
         <h3 class="feature__title">Уютная атмосфера</h3>
         <p class="feature__text">Мягкий свет, удобные кресла и тихие зоны для фокуса.</p>
@@ -125,295 +125,53 @@
     <h2 class="section__title">Меню еды и напитков</h2>
     <p class="section__subtitle">Свежие напитки, авторские закуски и домашние десерты.</p>
 
-    <!-- Tabs Buttons -->
     <div class="tabs">
       <button class="tabs__btn is-active" data-tab="drinks">Напитки</button>
       <button class="tabs__btn" data-tab="snacks">Закуски и сэндвичи</button>
       <button class="tabs__btn" data-tab="desserts">Десерты</button>
     </div>
 
-    <!-- Tab Content: Drinks -->
     <div class="tab-content is-active" id="drinks">
-      <div class="product">
-        <div class="product__image"><img src="images/drink5.png" alt="Холодный шоколадный кофе"></div>
-        <div class="product__info">
-          <h3 class="product__name">Холодный шоколадный кофе</h3>
-          <p class="product__desc">Эспрессо, молоко и шоколадная крошка.</p>
-        </div>
-        <div class="product__price">280 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink6.png" alt="Клубничный латте"></div>
-        <div class="product__info">
-          <h3 class="product__name">Клубничный латте</h3>
-          <p class="product__desc">Свежая клубника, молоко и лёд.</p>
-        </div>
-        <div class="product__price">320 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink7.png" alt="Матча с Орео"></div>
-        <div class="product__info">
-          <h3 class="product__name">Матча с Орео</h3>
-          <p class="product__desc">Зеленый чай матча, молоко и крошка печенья.</p>
-        </div>
-        <div class="product__price">350 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink10.png" alt="Матча латте"></div>
-        <div class="product__info">
-          <h3 class="product__name">Матча латте</h3>
-          <p class="product__desc">Классический зеленый чай матча со сливочной пенкой.</p>
-        </div>
-        <div class="product__price">290 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink11.png" alt="Бабл-ти"></div>
-        <div class="product__info">
-          <h3 class="product__name">Бабл-ти</h3>
-          <p class="product__desc">Черный чай с молоком и тапиоковыми шариками.</p>
-        </div>
-        <div class="product__price">310 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink12.webp" alt="Карамельный фраппе"></div>
-        <div class="product__info">
-          <h3 class="product__name">Карамельный фраппе</h3>
-          <p class="product__desc">Кофе со льдом, карамелью и взбитыми сливками.</p>
-        </div>
-        <div class="product__price">340 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink28.png" alt="Летний коктейль с лавандой и лимоном"></div>
-        <div class="product__info">
-          <h3 class="product__name">Летний коктейль с лавандой и лимоном</h3>
-          <p class="product__desc">Свежий лимон, лаванда и газированная вода.</p>
-        </div>
-        <div class="product__price">260 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink29.png" alt="Тропический лимонад"></div>
-        <div class="product__info">
-          <h3 class="product__name">Тропический лимонад</h3>
-          <p class="product__desc">Свежий лимон, ананас и газированная вода.</p>
-        </div>
-        <div class="product__price">300 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink30.jpg" alt="Протеиновый коктейль с лимоном"></div>
-        <div class="product__info">
-          <h3 class="product__name">Протеиновый коктейль с лимоном</h3>
-          <p class="product__desc">Свежий лимон, протеин и ванильное мороженое.</p>
-        </div>
-        <div class="product__price">330 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/drink31.jpg" alt="Ягодный милкшейк"></div>
-        <div class="product__info">
-          <h3 class="product__name">Ягодный милкшейк</h3>
-          <p class="product__desc">Малина, черника и ванильное мороженое.</p>
-        </div>
-        <div class="product__price">360 ₽</div>
-      </div>
+      <div class="product"><div class="product__image"><img src="images/drink5.png" alt="Холодный шоколадный кофе"></div><div class="product__info"><h3 class="product__name">Холодный шоколадный кофе</h3><p class="product__desc">Эспрессо, молоко и шоколадная крошка.</p></div><div class="product__price">280 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink6.png" alt="Клубничный латте"></div><div class="product__info"><h3 class="product__name">Клубничный латте</h3><p class="product__desc">Свежая клубника, молоко и лёд.</p></div><div class="product__price">320 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink7.png" alt="Матча с Орео"></div><div class="product__info"><h3 class="product__name">Матча с Орео</h3><p class="product__desc">Зеленый чай матча, молоко и крошка печенья.</p></div><div class="product__price">350 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink10.png" alt="Матча латте"></div><div class="product__info"><h3 class="product__name">Матча латте</h3><p class="product__desc">Классический зеленый чай матча со сливочной пенкой.</p></div><div class="product__price">290 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink11.png" alt="Бабл-ти"></div><div class="product__info"><h3 class="product__name">Бабл-ти</h3><p class="product__desc">Черный чай с молоком и тапиоковыми шариками.</p></div><div class="product__price">310 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink12.webp" alt="Карамельный фраппе"></div><div class="product__info"><h3 class="product__name">Карамельный фраппе</h3><p class="product__desc">Кофе со льдом, карамелью и взбитыми сливками.</p></div><div class="product__price">340 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink28.png" alt="Летний коктейль с лавандой и лимоном"></div><div class="product__info"><h3 class="product__name">Летний коктейль с лавандой и лимоном</h3><p class="product__desc">Свежий лимон, лаванда и газированная вода.</p></div><div class="product__price">260 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink29.png" alt="Тропический лимонад"></div><div class="product__info"><h3 class="product__name">Тропический лимонад</h3><p class="product__desc">Свежий лимон, ананас и газированная вода.</p></div><div class="product__price">300 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink30.jpg" alt="Протеиновый коктейль с лимоном"></div><div class="product__info"><h3 class="product__name">Протеиновый коктейль с лимоном</h3><p class="product__desc">Свежий лимон, протеин и ванильное мороженое.</p></div><div class="product__price">330 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/drink31.jpg" alt="Ягодный милкшейк"></div><div class="product__info"><h3 class="product__name">Ягодный милкшейк</h3><p class="product__desc">Малина, черника и ванильное мороженое.</p></div><div class="product__price">360 ₽</div></div>
     </div>
 
-    <!-- Tab Content: Snacks -->
     <div class="tab-content" id="snacks">
-      <div class="product">
-        <div class="product__image"><img src="images/snack0.png" alt="Брускетта с креветками и авокадо"></div>
-        <div class="product__info">
-          <h3 class="product__name">Брускетта с креветками и авокадо</h3>
-          <p class="product__desc">Авокадо, тигровые креветки и зелень.</p>
-        </div>
-        <div class="product__price">480 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack2.png" alt="Брускетта с инжиром и прошутто"></div>
-        <div class="product__info">
-          <h3 class="product__name">Брускетта с инжиром и прошутто</h3>
-          <p class="product__desc">Сливочный сыр, вяленое мясо и свежий инжир.</p>
-        </div>
-        <div class="product__price">420 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack8.png" alt="Классический сэндвич с лососем"></div>
-        <div class="product__info">
-          <h3 class="product__name">Классический сэндвич с лососем</h3>
-          <p class="product__desc">Слабосоленый лосось, чиабатта, огурцы и руккола.</p>
-        </div>
-        <div class="product__price">450 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack9.png" alt="Сэндвич с ветчиной и яйцом"></div>
-        <div class="product__info">
-          <h3 class="product__name">Сэндвич с ветчиной и яйцом</h3>
-          <p class="product__desc">Ветчина, омлет, сыр и горчица на хрустящей чиабатте.</p>
-        </div>
-        <div class="product__price">390 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack24.png" alt="Куриный сэндвич с авокадо"></div>
-        <div class="product__info">
-          <h3 class="product__name">Куриный сэндвич с авокадо</h3>
-          <p class="product__desc">Жареная курица, авокадо и соус барбекю.</p>
-        </div>
-        <div class="product__price">410 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack25.png" alt="Сэндвич со стейком из говядины"></div>
-        <div class="product__info">
-          <h3 class="product__name">Сэндвич со стейком из говядины</h3>
-          <p class="product__desc">Говяжий стейк, чеддер, руккола, авокадо и соус.</p>
-        </div>
-        <div class="product__price">520 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack27.png" alt="Брускетта с вялеными томатами и кедровыми орехами"></div>
-        <div class="product__info">
-          <h3 class="product__name">Брускетта с вялеными томатами и кедровыми орехами</h3>
-          <p class="product__desc">Чиабатта, вяленые помидоры, базилик и кедровые орехи.</p>
-        </div>
-        <div class="product__price">370 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/snack32.jpg" alt="Брускетта с грушей и сыром"></div>
-        <div class="product__info">
-          <h3 class="product__name">Брускетта с грушей и сыром</h3>
-          <p class="product__desc">Горгонзола, груша, мёд и грецкие орехи.</p>
-        </div>
-        <div class="product__price">400 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/salat33.jpg" alt="Салат Цезарь"></div>
-        <div class="product__info">
-          <h3 class="product__name">Салат Цезарь</h3>
-          <p class="product__desc">Романо, курица, пармезан и сухарики.</p>
-        </div>
-        <div class="product__price">460 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/salat34.jpg" alt="Салат с авокадо и киноа"></div>
-        <div class="product__info">
-          <h3 class="product__name">Салат с авокадо и киноа</h3>
-          <p class="product__desc">Киноа, авокадо, шпинат и лимонный дрессинг.</p>
-        </div>
-        <div class="product__price">490 ₽</div>
-      </div>
+      <div class="product"><div class="product__image"><img src="images/snack0.png" alt="Брускетта с креветками и авокадо"></div><div class="product__info"><h3 class="product__name">Брускетта с креветками и авокадо</h3><p class="product__desc">Авокадо, тигровые креветки и зелень.</p></div><div class="product__price">480 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack2.png" alt="Брускетта с инжиром и прошутто"></div><div class="product__info"><h3 class="product__name">Брускетта с инжиром и прошутто</h3><p class="product__desc">Сливочный сыр, вяленое мясо и свежий инжир.</p></div><div class="product__price">420 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack8.png" alt="Классический сэндвич с лососем"></div><div class="product__info"><h3 class="product__name">Классический сэндвич с лососем</h3><p class="product__desc">Слабосоленый лосось, чиабатта, огурцы и руккола.</p></div><div class="product__price">450 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack9.png" alt="Сэндвич с ветчиной и яйцом"></div><div class="product__info"><h3 class="product__name">Сэндвич с ветчиной и яйцом</h3><p class="product__desc">Ветчина, омлет, сыр и горчица на хрустящей чиабатте.</p></div><div class="product__price">390 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack24.png" alt="Куриный сэндвич с авокадо"></div><div class="product__info"><h3 class="product__name">Куриный сэндвич с авокадо</h3><p class="product__desc">Жареная курица, авокадо и соус барбекю.</p></div><div class="product__price">410 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack25.png" alt="Сэндвич со стейком из говядины"></div><div class="product__info"><h3 class="product__name">Сэндвич со стейком из говядины</h3><p class="product__desc">Говяжий стейк, чеддер, руккола, авокадо и соус.</p></div><div class="product__price">520 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack27.png" alt="Брускетта с вялеными томатами и кедровыми орехами"></div><div class="product__info"><h3 class="product__name">Брускетта с вялеными томатами и кедровыми орехами</h3><p class="product__desc">Чиабатта, вяленые помидоры, базилик и кедровые орехи.</p></div><div class="product__price">370 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/snack32.jpg" alt="Брускетта с грушей и сыром"></div><div class="product__info"><h3 class="product__name">Брускетта с грушей и сыром</h3><p class="product__desc">Горгонзола, груша, мёд и грецкие орехи.</p></div><div class="product__price">400 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/salat33.jpg" alt="Салат Цезарь"></div><div class="product__info"><h3 class="product__name">Салат Цезарь</h3><p class="product__desc">Романо, курица, пармезан и сухарики.</p></div><div class="product__price">460 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/salat34.jpg" alt="Салат с авокадо и киноа"></div><div class="product__info"><h3 class="product__name">Салат с авокадо и киноа</h3><p class="product__desc">Киноа, авокадо, шпинат и лимонный дрессинг.</p></div><div class="product__price">490 ₽</div></div>
     </div>
 
-    <!-- Tab Content: Desserts -->
     <div class="tab-content" id="desserts">
-      <div class="product">
-        <div class="product__image"><img src="images/dessert1.png" alt="Малиновый чизкейк и белый шоколад"></div>
-        <div class="product__info">
-          <h3 class="product__name">Малиновый чизкейк и белый шоколад</h3>
-          <p class="product__desc">Нежный сыр, малиновый соус и свежие ягоды.</p>
-        </div>
-        <div class="product__price">350 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert3.png" alt="Круассан с фисташкой и малиной"></div>
-        <div class="product__info">
-          <h3 class="product__name">Круассан с фисташкой и малиной</h3>
-          <p class="product__desc">Воздушная слоеная выпечка, фисташковый крем и ягоды.</p>
-        </div>
-        <div class="product__price">310 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert4.png" alt="Брауни с орехами"></div>
-        <div class="product__info">
-          <h3 class="product__name">Брауни с орехами</h3>
-          <p class="product__desc">Шоколадный бисквит с глазурью и фундуком.</p>
-        </div>
-        <div class="product__price">280 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert13.png" alt="Корпусный мандарин"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусный мандарин</h3>
-          <p class="product__desc">Цитрусовая начинка и нежный крем.</p>
-        </div>
-        <div class="product__price">300 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert14.png" alt="Корпусная вишня"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусная вишня</h3>
-          <p class="product__desc">Нежная вишнёвая начинка.</p>
-        </div>
-        <div class="product__price">320 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert15.png" alt="Корпусный лимон"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусный лимон</h3>
-          <p class="product__desc">Кислый лимонный курд и воздушная меренга.</p>
-        </div>
-        <div class="product__price">340 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert16.png" alt="Корпусное яблоко"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусное яблоко</h3>
-          <p class="product__desc">Тёплые яблоки, корица и песочное тесто.</p>
-        </div>
-        <div class="product__price">330 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert17.png" alt="Корпусный персик"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусный персик</h3>
-          <p class="product__desc">Спелые персики и миндальный крем.</p>
-        </div>
-        <div class="product__price">350 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert18.png" alt="Корпусный инжир"></div>
-        <div class="product__info">
-          <h3 class="product__name">Корпусный инжир</h3>
-          <p class="product__desc">Свежий инжир, мёд и козий сыр.</p>
-        </div>
-        <div class="product__price">360 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert19.png" alt="Шоколадный круассан с бананом"></div>
-        <div class="product__info">
-          <h3 class="product__name">Шоколадный круассан с бананом</h3>
-          <p class="product__desc">Тёмный шоколад внутри хрустящего теста.</p>
-        </div>
-        <div class="product__price">290 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert20.png" alt="Круассан с миндалём"></div>
-        <div class="product__info">
-          <h3 class="product__name">Круассан с миндалём</h3>
-          <p class="product__desc">Миндальный крем и посыпка из орехов.</p>
-        </div>
-        <div class="product__price">300 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert21.png" alt="Круассан с кремчизом и ягодами голубики"></div>
-        <div class="product__info">
-          <h3 class="product__name">Круассан с кремчизом и ягодами голубики</h3>
-          <p class="product__desc">Свежие ягоды и сливочный крем.</p>
-        </div>
-        <div class="product__price">310 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert22.png" alt="Круассан с клубникой"></div>
-        <div class="product__info">
-          <h3 class="product__name">Круассан с клубникой</h3>
-          <p class="product__desc">Свежая клубника и сливочный крем.</p>
-        </div>
-        <div class="product__price">300 ₽</div>
-      </div>
-      <div class="product">
-        <div class="product__image"><img src="images/dessert23.png" alt="Японский бисквит"></div>
-        <div class="product__info">
-          <h3 class="product__name">Японский бисквит</h3>
-          <p class="product__desc">Легкий и воздушный бисквит.</p>
-        </div>
-        <div class="product__price">370 ₽</div>
-      </div>
+      <div class="product"><div class="product__image"><img src="images/dessert1.png" alt="Малиновый чизкейк и белый шоколад"></div><div class="product__info"><h3 class="product__name">Малиновый чизкейк и белый шоколад</h3><p class="product__desc">Нежный сыр, малиновый соус и свежие ягоды.</p></div><div class="product__price">350 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert3.png" alt="Круассан с фисташкой и малиной"></div><div class="product__info"><h3 class="product__name">Круассан с фисташкой и малиной</h3><p class="product__desc">Воздушная слоеная выпечка, фисташковый крем и ягоды.</p></div><div class="product__price">310 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert4.png" alt="Брауни с орехами"></div><div class="product__info"><h3 class="product__name">Брауни с орехами</h3><p class="product__desc">Шоколадный бисквит с глазурью и фундуком.</p></div><div class="product__price">280 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert13.png" alt="Корпусный мандарин"></div><div class="product__info"><h3 class="product__name">Корпусный мандарин</h3><p class="product__desc">Цитрусовая начинка и нежный крем.</p></div><div class="product__price">300 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert14.png" alt="Корпусная вишня"></div><div class="product__info"><h3 class="product__name">Корпусная вишня</h3><p class="product__desc">Нежная вишнёвая начинка.</p></div><div class="product__price">320 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert15.png" alt="Корпусный лимон"></div><div class="product__info"><h3 class="product__name">Корпусный лимон</h3><p class="product__desc">Кислый лимонный курд и воздушная меренга.</p></div><div class="product__price">340 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert16.png" alt="Корпусное яблоко"></div><div class="product__info"><h3 class="product__name">Корпусное яблоко</h3><p class="product__desc">Тёплые яблоки, корица и песочное тесто.</p></div><div class="product__price">330 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert17.png" alt="Корпусный персик"></div><div class="product__info"><h3 class="product__name">Корпусный персик</h3><p class="product__desc">Спелые персики и миндальный крем.</p></div><div class="product__price">350 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert18.png" alt="Корпусный инжир"></div><div class="product__info"><h3 class="product__name">Корпусный инжир</h3><p class="product__desc">Свежий инжир, мёд и козий сыр.</p></div><div class="product__price">360 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert19.png" alt="Шоколадный круассан с бананом"></div><div class="product__info"><h3 class="product__name">Шоколадный круассан с бананом</h3><p class="product__desc">Тёмный шоколад внутри хрустящего теста.</p></div><div class="product__price">290 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert20.png" alt="Круассан с миндалём"></div><div class="product__info"><h3 class="product__name">Круассан с миндалём</h3><p class="product__desc">Миндальный крем и посыпка из орехов.</p></div><div class="product__price">300 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert21.png" alt="Круассан с кремчизом и ягодами голубики"></div><div class="product__info"><h3 class="product__name">Круассан с кремчизом и ягодами голубики</h3><p class="product__desc">Свежие ягоды и сливочный крем.</p></div><div class="product__price">310 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert22.png" alt="Круассан с клубникой"></div><div class="product__info"><h3 class="product__name">Круассан с клубникой</h3><p class="product__desc">Свежая клубника и сливочный крем.</p></div><div class="product__price">300 ₽</div></div>
+      <div class="product"><div class="product__image"><img src="images/dessert23.png" alt="Японский бисквит"></div><div class="product__info"><h3 class="product__name">Японский бисквит</h3><p class="product__desc">Легкий и воздушный бисквит.</p></div><div class="product__price">370 ₽</div></div>
     </div>
   </div>
 </section>
@@ -442,7 +200,7 @@
   <div class="container">
     <h2 class="section__title">Бронирование места</h2>
     <p class="section__subtitle">Оставьте заявку — мы подтвердим бронь по телефону.</p>
-    <form class="form">
+    <form class="form" id="bookingForm">
       <div class="form__group">
         <label for="name" class="form__label">Имя</label>
         <input type="text" id="name" class="form__input" placeholder="Ваше имя" required />
@@ -501,45 +259,6 @@
   </div>
 </footer>
 
-<script>
-  // Анимация кружки при скролле
-  const scrollingCup = document.querySelector('.scrolling-cup');
-  
-  if (scrollingCup) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const heroSection = document.querySelector('.hero');
-      const heroHeight = heroSection.offsetHeight;
-      const windowHeight = window.innerHeight;
-      
-      // Прогресс скролла (0 to 1)
-      const scrollProgress = scrolled / (heroHeight - windowHeight);
-      const clampedProgress = Math.min(Math.max(scrollProgress, 0), 1);
-      
-      // Движение ВЛЕВО и вращение
-      const rotation = clampedProgress * -720; // 2 оборота
-      const translateX = clampedProgress * -800; // Движение влево на 800px
-      
-      scrollingCup.style.transform = `translateY(-50%) translateX(${translateX}px) rotate(${rotation}deg)`;
-      
-      // Плавное исчезновение
-      if (clampedProgress > 0.7) {
-        scrollingCup.style.opacity = 0.6 - ((clampedProgress - 0.7) * 2);
-      } else {
-        scrollingCup.style.opacity = 0.6;
-      }
-    });
-  }
-  
-  // Табы меню
-  document.querySelectorAll('.tabs__btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tabs__btn').forEach(b => b.classList.remove('is-active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      document.getElementById(btn.getAttribute('data-tab')).classList.add('is-active');
-    });
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
